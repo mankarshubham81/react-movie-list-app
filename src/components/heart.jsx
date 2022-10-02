@@ -7,7 +7,6 @@ export default class Heart extends Component {
     }
 
     render(){
-        let colorr = {}
         let classes = "fa fa-heart";
         if(!this.props.like) classes += "-o";
 
