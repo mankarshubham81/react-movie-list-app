@@ -30,10 +30,10 @@ export default class MovieTable extends Component {
         // const getMvs = getMovies();
         // console.log("gg", getMovies());
         const {length : moviesCount} = this.state.getMvs;
-        if(moviesCount === 0) return <p>There are No Movies Available</p>
+        if(moviesCount === 0) return <p>There are No Movies</p>
         return(
             <React.Fragment>
-        <h2 className="m-2 p-2">There are {moviesCount} movies in Available</h2>
+        <h2 className="m-2 p-2">There are {moviesCount} movies</h2>
         <table className={"table table-striped table-dark"} >
             <thead>
                         <tr>
