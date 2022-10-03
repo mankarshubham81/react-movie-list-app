@@ -13,7 +13,7 @@ export default class Heart extends Component {
 
         return(
             <div>
-                <i className={classes} area-hidden ="true"></i>
+                <i onClick={this.props.onClick} style={{cursor: 'pointer'}} className={classes} area-hidden ="true"></i>
             </div>
         )
     }

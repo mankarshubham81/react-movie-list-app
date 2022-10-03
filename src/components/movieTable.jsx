@@ -16,8 +16,14 @@ export default class MovieTable extends Component {
         this.setState({getMvs: newMovies});
     };
 
-    handleH = (id) =>{
-        console.log("ddd", id)
+    handleLike = (movie) =>{
+        let movies = [...this.state.getMvs];
+        
+        let index = movies.indexOf(movie);
+        // movie[index] = {...movies[index]};
+        movies[index].liked = !movies[index].liked;
+        console.log("index", index)
+        this.setState({getMvs: movies});
     }
 
     render(){
@@ -49,7 +55,7 @@ export default class MovieTable extends Component {
                                     <td>
                                     <Heart 
                                     like={movie.liked}
-                                    onClick={() => this.handleH(movie)}
+                                    onClick={() => this.handleLike(movie)}
                                     />
                                     </td>
                                     <td><button onClick={() => this.handleDelete(movie)} className="btn btn-danger btn-sm rounded">delete</button></td>
